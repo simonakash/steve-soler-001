@@ -32,7 +32,7 @@
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
-			a .gradient-text:hover{
+			a .gradient-text:hover,button .gradient-text:hover{
 				background: linear-gradient(to right, #00D4FF, #090979);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
@@ -489,11 +489,18 @@
 						<h1 class="lg:text-4xl text-3xl font-bold leading-snug">Let’s Get Started</h1>
 						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-3">Need a Website or Landing Page?</p>
 						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4">Interested in Digital Marketing Automation?</p>
-						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4 md:px-8">Getting started is easy! The button below will open a form. Submit that and we’ll reach out to you in 24 to 48 hours with the next steps.</p>
+						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4">Getting started is easy!</p>
+						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4 md:px-8">The button below will open a form. Submit that and we’ll reach out to you in 24 to 48 hours with the next steps.</p>
 						<!---->
-						<a class="lg:text-2xl text-xl font-bold lg:py-5 py-3 lg:px-24 px-16 mx-auto md:mt-10 mt-8 inline-flex items-center justify-center px-6 bg-white rounded-lg" href="#">
-							<span class="gradient-text duration-300">Let’s Talk!</span>
-						</a>
+						<div x-data="{modal:false}">
+							<button @click="modal=true" class="lg:text-2xl text-xl font-bold lg:py-5 py-3 lg:px-24 px-16 mx-auto md:mt-10 mt-8 inline-flex items-center justify-center px-6 bg-white rounded-lg">
+								<span class="gradient-text duration-300">Let’s Talk!</span>
+							</button>
+							<!---->
+							<div>
+								<iframe  x-show="modal" src="https://form.questionscout.com/611046be390dbd3cf2d60386" frameborder="0" width="100%" height="100%" id="kfqwmodzfqsgko" class="qs-form" style="position: fixed; z-index: 2048; inset: 0px; border: 0px;"></iframe>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -543,18 +550,18 @@
 						<div class=" text-white lg:flex justify-center">
 							<ul class=" lg:text-lg text-sm text-white">
 								<!---->
-								<li class=" font-semibold mb-3">Quick Links</li>
+								<li class=" font-semibold mb-3 lg:text-xl text-lg">Quick Links</li>
 								<!---->
 								<li>
-									<a class=" font-medium mb-2" href="#">FAQs</a>
+									<a class=" font-medium mb-2"href="#services">Services</a>
 								</li>
 								<!---->
 								<li>
-									<a class=" font-medium mb-2" href="#">Privacy & policy</a>
+									<a class=" font-medium mb-2" href="#our-work">Our Work</a>
 								</li>
 								<!---->
 								<li>
-									<a class=" font-medium mb-2" href="#">Terms & condition</a>
+									<a class=" font-medium mb-2" href="#our-story">Our Story</a>
 								</li>
 							</ul>
 						</div>
@@ -562,7 +569,7 @@
 						<div class=" text-white lg:flex justify-center">
 							<ul class=" lg:text-lg text-sm text-white">
 								<!---->
-								<li class=" font-semibold mb-3">Contact Us</li>
+								<li class=" font-semibold mb-3 lg:text-xl text-lg">Contact Us</li>
 								<!---->
 								<li>
 									<a class=" font-medium mb-2" href="mailto:sample@email.com">sample@email.com</a>
@@ -600,9 +607,9 @@
 				</a>
 			</div>
 		</footer>
-
 		<!--  Alpine Js -->
 		<script src="js/alpine.min.js" defer></script>
+		</script>
 	</body>
 </html>
 
