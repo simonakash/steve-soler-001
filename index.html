@@ -49,6 +49,11 @@
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
+			.shadow-2xl{
+			-webkit-box-shadow: 0px 8px 24px 0px rgb(0 0 0 / 15%);
+			-moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.15);
+			box-shadow: 0px 8px 24px 0px rgb(0 0 0 / 15%);
+			}
 			.bg-radial-gradient{
 				background: radial-gradient(107% 103.13% at -3.38% 3.26%, #00D4FF 0%, #06429F 36.62%, #081E87 64.03%, #090979 100%);
 			}
@@ -76,9 +81,6 @@
 				#footer{
 				min-height:425px;
 				}
-				.shadow-2xl {
-				box-shadow: 0 19px 60px rgb(0 0 0 / 50%), 0 15px 38px rgb(0 0 0 / 30%);
-				}
 			}
 			@media (min-width: 1280px){
 			.xl\:text-5xl{
@@ -99,7 +101,7 @@
 	<body x-data="{sticky: true}">
 		<!-- ==Header Section == -->
 		<header @scroll.window="sticky= (window.pageYOffset > 300) ? false :true"
-		:class="{'bg-radial-gradient duration-500 sticky shadow-xl filter drop-shadow-2xl' : !sticky , 'absolute' : sticky}"
+		:class="{'bg-radial-gradient duration-500 sticky shadow-2xl' : !sticky , 'absolute' : sticky}"
 		class="right-0 top-0 left-0 z-50">
 			<!----Main nav--->
 			<nav x-data="{humberger: false}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-5 py-4 max-w-1240 mx-auto">
@@ -338,27 +340,27 @@
 					<!--grid-->
 					<div class=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 bg-white">
 						<!--001-->
-						<div @click.prevent="tab='tab1'" class=" p-5 rounded-xl shadow-2xl shadow-xl cursor-pointer">
+						<div @click.prevent="tab='tab1'" class=" p-5 rounded-xl shadow-2xl cursor-pointer">
 							<img height="100%" width="100%" class="mx-auto w-full h-auto" src="images/home/07.jpg" alt="//">
 						</div>
 						<!--002-->
-						<div @click.prevent="tab='tab2'" class=" p-5 rounded-xl shadow-2xl shadow-xl cursor-pointer">
+						<div @click.prevent="tab='tab2'" class=" p-5 rounded-xl shadow-2xl cursor-pointer">
 							<img height="100%" width="100%" class="mx-auto w-full h-auto" src="images/home/07.jpg" alt="//">
 						</div>
 						<!--003-->
-						<div @click.prevent="tab='tab3'" class=" p-5 rounded-xl shadow-2xl shadow-xl cursor-pointer">
+						<div @click.prevent="tab='tab3'" class=" p-5 rounded-xl shadow-2xl cursor-pointer">
 							<img height="100%" width="100%" class="mx-auto w-full h-auto" src="images/home/07.jpg" alt="//">
 						</div>
 						<!--004-->
-						<div @click.prevent="tab='tab4'" class=" p-5 rounded-xl shadow-2xl shadow-xl cursor-pointer">
+						<div @click.prevent="tab='tab4'" class=" p-5 rounded-xl shadow-2xl cursor-pointer">
 							<img height="100%" width="100%" class="mx-auto w-full h-auto" src="images/home/07.jpg" alt="//">
 						</div>
 						<!--005-->
-						<div @click.prevent="tab='tab5'" class=" p-5 rounded-xl shadow-2xl shadow-xl cursor-pointer">
+						<div @click.prevent="tab='tab5'" class=" p-5 rounded-xl shadow-2xl cursor-pointer">
 							<img height="100%" width="100%" class="mx-auto w-full h-auto" src="images/home/07.jpg" alt="//">
 						</div>
 						<!--006-->
-						<div @click.prevent="tab='tab6'" class=" p-5 rounded-xl shadow-2xl shadow-xl cursor-pointer">
+						<div @click.prevent="tab='tab6'" class=" p-5 rounded-xl shadow-2xl cursor-pointer">
 							<img height="100%" width="100%" class="mx-auto w-full h-auto" src="images/home/07.jpg" alt="//">
 						</div>
 					</div>
