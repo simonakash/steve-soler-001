@@ -11,7 +11,6 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="https://noahxavier.com/images/0/5470771/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="https://noahxavier.com/images/0/5470774/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="https://noahxavier.com/images/0/5470777/favicon-16x16.pngg">
-		<link rel="manifest" href="https://noahxavier.com/images/0/5470780/site.webmanifest">
 		<link rel="mask-icon" href="https://noahxavier.com/images/0/5470781/safari-pinned-tab.svg" color="#5bbad5">
 		<link rel="shortcut icon" href="https://noahxavier.com/images/0/5470784/favicon.ico">
 		<meta name="apple-mobile-web-app-title" content="NX Design Studio">
@@ -348,7 +347,7 @@
 			</section>
 			<!-----=====Sec 004=======----->
 			<section id="our-work">
-				<div x-data="{tab : 'tab'}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 py-20 max-w-1240 mx-auto">
+				<div x-data="{tab : 'tab'}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 pt-20 max-w-1240 mx-auto">
 					<!--Heading-->
 					<div class=" text-center pb-16 lg:w-3/5 md:4/5 w-full mx-auto xl:px-10">
 						<h1 class="gradient-text lg:text-4xl text-3xl font-bold inline-block lg:pt-10">Our Work</h1>
@@ -507,30 +506,32 @@
 				</div>
 			</section>
 			<!-----=====Sec 005=======----->
-			<section id="Get-Started" class="lg:px-20 xl:px-32 md:px-16 sm:px-10 px-7 lg:my-40 max-w-1240 mx-auto bg-cover bg-center bg-no-repeat" style=" background-image: url(images/bg/Lets-Get-Started-BG.svg);">
-				<!------->
-				<div class="flex items-center justify-center" style="min-height: 562px;">
-					<div class=" lg:w-3/4 md:w-10/12 w-full text-center text-white">
-						<h1 class="lg:text-4xl text-3xl font-bold leading-snug">Let’s Get Started</h1>
-						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-3">Need a Website or Landing Page?</p>
-						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4">Interested in Digital Marketing Automation?</p>
-						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4">Getting started is easy!</p>
-						<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4 md:px-8">The button below will open a form. Submit that and we’ll reach out to you in 24 to 48 hours with the next steps.</p>
-						<!---->
-						<div x-data="{modal:false}">
-							<button @click="modal=true" class="lg:text-2xl text-xl font-bold lg:py-5 py-3 lg:px-24 px-16 mx-auto md:mt-10 mt-8 inline-flex items-center justify-center px-7 bg-white rounded-lg">
-								<span class="gradient-text duration-300">Let’s Talk!</span>
-							</button>
+			<section id="Get-Started" class="lg:py-28 py-20">
+				<div class="lg:px-20 xl:px-32 md:px-16 sm:px-10 px-7 max-w-1240 mx-auto bg-cover bg-center bg-no-repeat" style=" background-image: url(images/bg/Lets-Get-Started-BG.svg);">	
+					<!------->
+					<div class="flex items-center justify-center" style="min-height: 562px;">
+						<div class=" lg:w-3/4 md:w-10/12 w-full text-center text-white">
+							<h1 class="lg:text-4xl text-3xl font-bold leading-snug">Let’s Get Started</h1>
+							<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-3">Need a Website or Landing Page?</p>
+							<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4">Interested in Digital Marketing Automation?</p>
+							<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4">Getting started is easy!</p>
+							<p class=" font-semibold lg:text-xl text-sm md:mt-8 mt-4 md:px-8">The button below will open a form. Submit that and we’ll reach out to you in 24 to 48 hours with the next steps.</p>
 							<!---->
-							<div x-show="modal" class="fixed top-0 left-0 right-0 bottom-0 z-50 overflow-hidden">
-								<div class="absolute md:right-20 sm:right-10 right-5 sm:top-10 top-16">
-									<button class=" p-1 rounded-lg border border-white" @click="modal=false">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
-										</svg>
-									</button>
+							<div x-data="{modal:false}">
+								<button @click="modal=true" class="lg:text-2xl text-xl font-bold lg:py-5 py-3 lg:px-24 px-16 mx-auto md:mt-10 mt-8 inline-flex items-center justify-center px-7 bg-white rounded-lg">
+									<span class="gradient-text duration-300">Let’s Talk!</span>
+								</button>
+								<!---->
+								<div x-show="modal" class="fixed top-0 left-0 right-0 bottom-0 z-50 overflow-hidden">
+									<div class="absolute md:right-20 sm:right-10 right-5 sm:top-10 top-16">
+										<button class=" p-1 rounded-lg border border-white" @click="modal=false">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+											</svg>
+										</button>
+									</div>
+									<iframe  src="https://form.questionscout.com/611046be390dbd3cf2d60386" frameborder="0" width="100%" height="100%" id="kfqwmodzfqsgko" class="qs-form w-full h-full" ></iframe>
 								</div>
-								<iframe  src="https://form.questionscout.com/611046be390dbd3cf2d60386" frameborder="0" width="100%" height="100%" id="kfqwmodzfqsgko" class="qs-form w-full h-full" ></iframe>
 							</div>
 						</div>
 					</div>
