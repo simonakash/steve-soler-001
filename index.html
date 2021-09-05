@@ -91,6 +91,14 @@
 				min-height:425px;
 				}
 			}
+			@media (max-width:668px){
+				#bg1{
+					background-image: url(images/bg/Hero-sm.svg) !important;
+				}
+				footer{
+					background-image: url(images/bg/Footer-BG-sm.svg) !important;
+				}
+			}
 			@media (min-width: 1280px){
 			.xl\:text-5xl{
 				font-size: 41.29px;
@@ -204,7 +212,7 @@
 		<!-- ==Main Section == -->
 		<main>
 			<!-----=====Sec 001=======----->
-			<section class=" bg-center bg-cover bg-no-repeat drop-shadow-2xl" style=" background-image: url(images/bg/Hero-BG.svg);">
+			<section id="bg1" class=" bg-center bg-cover bg-no-repeat drop-shadow-2xl" style=" background-image: url(images/bg/Hero-BG.svg);">
 				<!------->
 				<div class="h-full flex items-center justify-center xl:pb-16 max-w-1240 mx-auto" id="sec-1">
 					<div class="lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white">
@@ -216,8 +224,6 @@
 						</a>
 					</div>
 				</div>
-				<!---
-				<svg height="100%" width="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 151.86666666666667,215.46666666666667 303.73333333333335,230.93333333333334 480,220 C 656.2666666666667,209.06666666666666 856.9333333333334,171.73333333333332 1021,164 C 1185.0666666666666,156.26666666666668 1312.5333333333333,178.13333333333333 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="currentColor" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 200)"></path></svg>-->
 			</section>
 			<!-----=====Sec 002=======----->
 			<section id="services">
@@ -278,7 +284,7 @@
 				</div>
 			</section>
 			<!-----=====Sec 003=======----->
-			<section class="lg:px-20 xl:px-48 md:px-16 sm:px-10 px-7 my-20 max-w-1240 mx-auto bg-cover bg-center bg-no-repeat" style=" background-image: url(images/bg/How-We-Work-BG.svg);">
+			<section id="bg2" class="lg:px-20 xl:px-48 md:px-16 sm:px-10 px-7 my-20 max-w-1240 mx-auto bg-cover bg-center bg-no-repeat" style=" background-image: url(images/bg/How-We-Work-BG.svg);">
 				<!------->
 				<div class="py-20 lg:pt-40 flex icon-erase" id="sec-3">
 					<div>
@@ -380,7 +386,7 @@
 						<!--------modal 001---------->
 						<div x-show.transition="tab === 'tab1'"
 						class="z-50  bg-black bg-opacity-70 md:overflow-hidden overflow-y-auto fixed left-0 top-0 w-full h-full flex justify-center items-center">
-							<div @click.away="modal=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
+							<div @click.away="tab=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
 								<!--------close button---------->
 								<div @click="tab=false" class=" absolute text-blue-600  -top-8 right-2">
 									<span class="">
@@ -400,7 +406,7 @@
 						<!--------modal 002---------->
 						<div x-show.transition="tab === 'tab2'"
 						class="z-50  bg-black bg-opacity-70 md:overflow-hidden overflow-y-auto fixed left-0 top-0 w-full h-full flex justify-center items-center">
-							<div @click.away="modal=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
+							<div @click.away="tab=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
 								<!--------close button---------->
 								<div @click="tab=false" class=" absolute text-blue-600  -top-8 right-2">
 									<span class="">
@@ -420,7 +426,7 @@
 						<!--------modal 003---------->
 						<div x-show.transition="tab === 'tab3'"
 						class="z-50  bg-black bg-opacity-70 md:overflow-hidden overflow-y-auto fixed left-0 top-0 w-full h-full flex justify-center items-center">
-							<div @click.away="modal=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
+							<div @click.away="tab=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
 								<!--------close button---------->
 								<div @click="tab=false" class=" absolute text-blue-600  -top-8 right-2">
 									<span class="">
@@ -440,7 +446,7 @@
 						<!--------modal 004---------->
 						<div x-show.transition="tab === 'tab4'"
 						class="z-50  bg-black bg-opacity-70 md:overflow-hidden overflow-y-auto fixed left-0 top-0 w-full h-full flex justify-center items-center">
-							<div @click.away="modal=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
+							<div @click.away="tab=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
 								<!--------close button---------->
 								<div @click="tab=false" class=" absolute text-blue-600  -top-8 right-2">
 									<span class="">
@@ -460,7 +466,7 @@
 						<!--------modal 005---------->
 						<div x-show.transition="tab === 'tab5'"
 						class="z-50  bg-black bg-opacity-70 md:overflow-hidden overflow-y-auto fixed left-0 top-0 w-full h-full flex justify-center items-center">
-							<div @click.away="modal=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
+							<div @click.away="tab=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
 								<!--------close button---------->
 								<div @click="tab=false" class=" absolute text-blue-600  -top-8 right-2">
 									<span class="">
@@ -480,7 +486,7 @@
 						<!--------modal 006---------->
 						<div x-show.transition="tab === 'tab6'"
 						class="z-50  bg-black bg-opacity-70 md:overflow-hidden overflow-y-auto fixed left-0 top-0 w-full h-full flex justify-center items-center">
-							<div @click.away="modal=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
+							<div @click.away="tab=false" class="md:mt-20  bg-white p-5 rounded-xl  relative w-11/12 md:w-4/5 xl:w-3/5">
 								<!--------close button---------->
 								<div @click="tab=false" class=" absolute text-blue-600  -top-8 right-2">
 									<span class="">
@@ -559,7 +565,7 @@
 			<!-------->
 			<div class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 max-w-1240 mx-auto bg-cover bg-center bg-no-repeat flex items-end" id="footer">
 				<!------->
-				<div class=" grid lg:grid-cols-3 grid-cols-1 gap-10 lg:py-20 lg:pb-24 pb-16 xl:pt-20 pt-40">
+				<div class=" grid lg:grid-cols-3 grid-cols-1 gap-10 lg:py-20 lg:pb-24 pb-16 xl:pt-20 pt-20">
 					<!--001-->
 					<div class=" text-white">
 						<!---Logo---->
