@@ -117,8 +117,8 @@
 	<body x-data="{sticky: true}">
 		<!-- ==Header Section == -->
 		<header @scroll.window="sticky= (window.pageYOffset > 300) ? false :true"
-		:class="{'bg-radial-gradient duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute' : sticky}"
-		class="right-0 top-0 left-0 z-50">
+		:class="{' duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute' : sticky}"
+		class="right-0 top-0 left-0 z-50 bg-radial-gradient">
 			<!----Main nav--->
 			<nav x-data="{humberger: false}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 py-4 max-w-1240 mx-auto">
 				<div class="flex items-center justify-between">
@@ -211,10 +211,11 @@
 		<!-- ==Main Section == -->
 		<main>
 			<!-----=====Sec 001=======----->
-			<section id="bg1" class=" bg-center bg-cover bg-no-repeat drop-shadow-2xl" style=" background-image: url(images/bg/Hero-BG.svg);">
+			<section id="bg1" class="relative bg-center bg-cover bg-no-repeat drop-shadow-2xl">
+				<video class="absolute" src="bg.mp4" autoplay loop playsinline muted></video>
 				<!------->
 				<div class="h-full flex items-center justify-center xl:pb-16 max-w-1240 mx-auto" id="sec-1">
-					<div class="lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white">
+					<div class="lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white bg-radial-gradient z-50 p-10">
 						<h1 class=" lg:text-4xl text-3xl xl:text-5xl poppins font-extrabold leading-snug">It's Time to Upgrade your Digital Marketing to the NeXt Level!</h1>
 						<p class=" xl:text-2xl text-base font-semibold poppins mt-6">Websites<span class=" mx-4">|</span>Landing Pages<span class=" mx-4">|</span>Marketing Automation</p>
 						<!---->
