@@ -7,7 +7,7 @@
 		<title>NX DS</title>
 		<!-- Company Icon -->
 		<link rel="icon" href="images/NXDS-Favicon.png">
-		<!-- Google Font  -->
+
 		<link rel="apple-touch-icon" sizes="180x180" href="https://noahxavier.com/images/0/5470771/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="https://noahxavier.com/images/0/5470774/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="https://noahxavier.com/images/0/5470777/favicon-16x16.pngg">
@@ -38,6 +38,10 @@
 			body{
 				font-family: 'Montserrat', sans-serif;
 			}
+			img,
+			video {
+				object-fit: cover;
+			}
 			.gradient-text{
 				background: linear-gradient(to right, #090979, #00D4FF);
 				-webkit-background-clip: text;
@@ -52,6 +56,10 @@
 			-webkit-box-shadow: 0px 8px 24px 0px rgb(0 0 0 / 15%);
 			-moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.15);
 			box-shadow: 0px 8px 24px 0px rgb(0 0 0 / 15%);
+			}
+			.bg-radial-gradient-1{
+				background: linear-gradient(
+				180deg, rgba(0, 0, 128, 0.91) 37.48%, rgba(0, 212, 255, 0.9) 109.26%);
 			}
 			.bg-radial-gradient{
 				background: radial-gradient(107% 103.13% at -3.38% 3.26%, #00D4FF 0%, #06429F 36.62%, #081E87 64.03%, #090979 100%);
@@ -91,9 +99,6 @@
 				}
 			}
 			@media (max-width:668px){
-				#bg1{
-					background-image: url(images/bg/hero.svg) !important;
-				}
 				footer{
 					background-image: url(images/bg/Footer-BG-sm.svg) !important;
 				}
@@ -117,8 +122,8 @@
 	<body x-data="{sticky: true}">
 		<!-- ==Header Section == -->
 		<header @scroll.window="sticky= (window.pageYOffset > 300) ? false :true"
-		:class="{' duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute' : sticky}"
-		class="right-0 top-0 left-0 z-50 bg-radial-gradient">
+		:class="{'bg-radial-gradient duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute' : sticky}"
+		class="right-0 top-0 left-0 z-50">
 			<!----Main nav--->
 			<nav x-data="{humberger: false}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 py-4 max-w-1240 mx-auto">
 				<div class="flex items-center justify-between">
@@ -211,17 +216,23 @@
 		<!-- ==Main Section == -->
 		<main>
 			<!-----=====Sec 001=======----->
-			<section id="bg1" class="relative bg-center bg-cover bg-no-repeat drop-shadow-2xl">
-				<video class="absolute" src="bg.mp4" autoplay loop playsinline muted></video>
-				<!------->
-				<div class="h-full flex items-center justify-center xl:pb-16 max-w-1240 mx-auto" id="sec-1">
-					<div class="lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white bg-radial-gradient z-50 p-10 rounded-xl">
-						<h1 class=" lg:text-4xl text-3xl xl:text-5xl poppins font-extrabold leading-snug">It's Time to Upgrade your Digital Marketing to the NeXt Level!</h1>
-						<p class=" xl:text-2xl text-base font-semibold poppins mt-6">Websites<span class=" mx-4">|</span>Landing Pages<span class=" mx-4">|</span>Marketing Automation</p>
-						<!---->
-						<a class="xl:text-2xl text-xl font-bold lg:h-16 h-12 w-72 mx-auto mt-10 block flex items-center justify-center px-7 bg-white rounded-lg" href="#Get-Started">
-							<span class="gradient-text">Let’s Get Started!</span>
-						</a>
+			<section>
+				<!---->
+				<div class=" h-screen w-full flex justify-center items-center">
+					<!---->
+					<video class=" w-full h-full absolute top-0 left-0 z-10 object-cover" width="100%" height="100%" autoplay loop muted>
+						<source src="videos/NXDS-Hero-Background-Video.mp4" type="video/mp4" />
+					</video>
+					<!------->
+					<div class="flex items-center justify-center absolute h-full w-full top-0 left-0 z-20 bg-radial-gradient-1 ">
+						<div class="2xl:w-1/2 lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white pt-10 lg:pt-0">
+							<h1 class=" lg:text-4xl xl:text-5xl 2xl:text-6xl text-2xl md:text-3xl poppins font-extrabold leading-snug">It's Time to Upgrade your Digital Marketing to the NeXt Level!</h1>
+							<p class=" xl:text-2xl sm:text-base text-xs font-semibold poppins lg:mt-6 mt-4">Websites<span class=" mx-4">|</span>Landing Pages<span class=" mx-4">|</span>Marketing Automation</p>
+							<!---->
+							<a class="xl:text-2xl sm:text-xl text-sm font-bold lg:h-16 sm:h-12 h-10 w-72 mx-auto lg:mt-10 mt-5 block flex items-center justify-center px-7 bg-white rounded-lg" href="#Get-Started">
+								<span class="gradient-text">Let’s Get Started!</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
