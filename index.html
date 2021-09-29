@@ -67,7 +67,7 @@
 				background: radial-gradient(107% 103.13% at -3.38% 3.26%, #00D4FF 0%, #06429F 36.62%, #081E87 64.03%, #090979 100%);
 			}
 			.bg-radial-gradient-2{
-				background: radial-gradient(107% 103.13% at -3.38% 3.26%, #00d4ffdb 0%, #06429fe3 36.62%, #081e87d9 64.03%, #090979d9 100%);
+				background: linear-gradient(180deg, rgba(0, 0, 128, 0.91) 37.48%, rgba(0, 212, 255, 0.9) 109.26%);
 			}
 			#hero{
 				height: 740px;
@@ -113,7 +113,7 @@
 			}
 			@media (min-width: 1500px){
 				#hero{
-					height: 1080px;
+					height: 930px;
 				}
 				#footer{
 				min-height:510px;
@@ -124,7 +124,7 @@
 	<body x-data="{sticky: true}">
 		<!-- ==Header Section == -->
 		<header @scroll.window="sticky= (window.pageYOffset > 300) ? false :true"
-		:class="{'bg-radial-gradient duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute bg-radial-gradient-2' : sticky}"
+		:class="{'bg-radial-gradient duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute bg-radial-gradient-1' : sticky}"
 		class="right-0 top-0 left-0 z-50">
 			<!----Main nav--->
 			<nav x-data="{humberger: false}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 py-4 max-w-1240 mx-auto">
@@ -227,7 +227,7 @@
 					</video>
 					<!------->
 					<div class="flex items-center justify-center absolute h-full w-full top-0 left-0 z-20">
-						<div class="2xl:w-1/2 lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white lg:px-20 sm:px-10 px-4 2xl:py-20 py-10 bg-radial-gradient-1 rounded-2xl mx-5">
+						<div class="2xl:w-1/2 lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white lg:px-20 sm:px-10 px-4 2xl:py-20 py-10 bg-radial-gradient-2 rounded-2xl mx-5">
 							<h1 class=" lg:text-4xl 2xl:text-5xl text-2xl md:text-3xl poppins font-extrabold leading-snug tracking-wide">It's Time to Upgrade your Digital Marketing to the NeXt Level!</h1>
 							<p class=" xl:text-2xl sm:text-base text-xs font-semibold poppins lg:mt-6 mt-4 leading-snug">Websites<span class=" mx-4">|</span>Landing Pages<span class=" mx-4">|</span>Marketing Automation</p>
 							<!---->
@@ -237,7 +237,7 @@
 						</div>
 					</div>
 					<!------->
-					<div class=" absolute left-0 lg:-bottom-20 -bottom-3 w-full overflow-hidden lg:h-40 md:h-32 sm:h-20 h-8 z-30">
+					<div class="absolute left-0 lg:-bottom-16 -bottom-3 w-full overflow-hidden lg:h-32 md:h-24 sm:h-20 h-8 z-30">
 						<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.94,69.09 C262.81,-113.89 279.06,161.09 501.56,-0.90 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg>
 					</div>
 				</div>
