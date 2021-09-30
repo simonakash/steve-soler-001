@@ -67,11 +67,12 @@
 				background: radial-gradient(107% 103.13% at -3.38% 3.26%, #00D4FF 0%, #06429F 36.62%, #081E87 64.03%, #090979 100%);
 			}
 			.bg-radial-gradient-2{
-				background: linear-gradient(180deg, rgba(0, 0, 128, 0.91) 37.48%, rgba(0, 212, 255, 0.9) 109.26%);
+				background: linear-gradient(
+				180deg, rgba(0, 0, 128, 0.93) 37.48%, rgba(0, 212, 255, 0.93) 109.26%);
 			}
 			#hero{
-				height: 740px;
-			}
+					height: 700px;
+				}
 			#sec-3{
 				min-height:1825px;
 			}
@@ -101,6 +102,9 @@
 				}
 			}
 			@media (max-width:668px){
+				#hero{
+					height: 560px;
+				}
 				footer{
 					background-image: url(images/bg/Footer-BG-sm.svg) !important;
 				}
@@ -222,14 +226,14 @@
 				<!---->
 				<div id="hero" class=" w-full flex justify-center items-center relative">
 					<!---->
-					<video class=" w-full h-full absolute top-0 left-0 z-10 object-cover" width="100%" height="100%" autoplay loop muted>
+					<video class=" w-full h-full absolute top-0 left-0 z-10 object-cover" width="100%" height="100%" autoplay muted>
 						<source src="videos/NXDS-Hero-Background-Video.mp4" type="video/mp4" />
 					</video>
 					<!------->
 					<div class="flex items-center justify-center absolute h-full w-full top-0 left-0 z-20">
 						<div class="2xl:w-1/2 lg:w-3/5 md:w-4/5 w-full px-7 text-center text-white lg:px-20 sm:px-10 px-4 2xl:py-20 py-10 bg-radial-gradient-2 rounded-2xl mx-5">
-							<h1 class=" lg:text-4xl 2xl:text-5xl text-2xl md:text-3xl poppins font-extrabold leading-snug tracking-wide">It's Time to Upgrade your Digital Marketing to the NeXt Level!</h1>
-							<p class=" xl:text-2xl sm:text-base text-xs font-semibold poppins lg:mt-6 mt-4 leading-snug">Websites<span class=" mx-4">|</span>Landing Pages<span class=" mx-4">|</span>Marketing Automation</p>
+							<h1 class=" lg:text-4xl text-2xl md:text-3xl poppins font-extrabold leading-snug tracking-wide">It's Time to Upgrade your Digital Marketing to the NeXt Level!</h1>
+							<p class=" xl:text-xl sm:text-base text-xs font-semibold poppins lg:mt-6 mt-4 leading-snug">Websites<span class=" mx-4">|</span>Landing Pages<span class=" mx-4">|</span>Marketing Automation</p>
 							<!---->
 							<a class="xl:text-2xl sm:text-xl text-sm font-bold lg:h-16 sm:h-12 h-10 w-72 mx-auto lg:mt-10 mt-5 block flex items-center justify-center px-7 bg-white rounded-lg" href="#Get-Started">
 								<span class="gradient-text">Let’s Get Started!</span>
@@ -237,8 +241,8 @@
 						</div>
 					</div>
 					<!------->
-					<div class="absolute left-0 lg:-bottom-16 -bottom-3 w-full overflow-hidden lg:h-32 md:h-24 sm:h-20 h-8 z-30">
-						<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.94,69.09 C262.81,-113.89 279.06,161.09 501.56,-0.90 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg>
+					<div class="absolute left-0 xl:-bottom-2 -bottom-5 w-full overflow-hidden lg:h-32 md:h-24 h-20 z-30">
+						<img height="100%" width="295px" class="w-full h-auto" src="images/home/svgave.svg" alt="svg">
 					</div>
 				</div>
 			</section>
