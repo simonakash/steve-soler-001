@@ -4,21 +4,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Company Name -->
-		<title>NX DS</title>
-		<!-- Company Icon -->
-		<link rel="icon" href="images/NXDS-Favicon.png">
-
-		<link rel="apple-touch-icon" sizes="180x180" href="https://noahxavier.com/images/0/5470771/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="https://noahxavier.com/images/0/5470774/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="https://noahxavier.com/images/0/5470777/favicon-16x16.pngg">
-		<link rel="mask-icon" href="https://noahxavier.com/images/0/5470781/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="https://noahxavier.com/images/0/5470784/favicon.ico">
+		<title>Noah Xavier Design Studio</title>
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="https://noahxavier.com/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://noahxavier.com/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://noahxavier.com/images/favicon/favicon-16x16.pngg">
+		<link rel="manifest" href="https://noahxavier.com/images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="https://noahxavier.com/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="https://noahxavier.com/images/favicon/favicon.ico">
 		<meta name="apple-mobile-web-app-title" content="NX Design Studio">
 		<meta name="application-name" content="NX Design Studio">
 		<meta name="msapplication-TileColor" content="#2b5797">
-		<meta name="msapplication-config" content="https://noahxavier.com/images/0/5470813/browserconfig.xml">
+		<meta name="msapplication-config" content="https://noahxavier.com/images/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
-		<!-- Google Font  -->
 
 		<!-- Tailwind-Css -->
 		<link rel="stylesheet" href="css/tailwind.min.css">
@@ -85,7 +83,7 @@
 			.drop-shadow-2xl-upper{
 				filter: drop-shadow(-0.35rem -0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 			}
-			ul{
+			#services ul{
 				text-indent: -22px;
     			margin-left: 24px;
 			}
@@ -140,7 +138,7 @@
 		:class="{'bg-radial-gradient duration-500 sticky drop-shadow-2xl' : !sticky , 'absolute bg-radial-gradient-1' : sticky}"
 		class="right-0 top-0 left-0 z-50">
 			<!----Main nav--->
-			<nav x-data="{humberger: false}" class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 py-4 max-w-1240 mx-auto">
+			<nav class="lg:px-20 xl:px-0 md:px-16 sm:px-10 px-7 py-4 max-w-1240 mx-auto">
 				<div class="flex items-center justify-between">
 					<!----->
 					<div>
@@ -204,19 +202,19 @@
 										<img height="100%" width="100%" class="mx-auto w-auto h-auto" src="images/logo.png" alt="Logo">
 									</a>
 								</div>
-								<div class="space-x-6 text-xs font-semibold w-full text-center" x-data=" {active :'active1'}">
+								<div class="space-x-6 text-xs font-semibold w-full text-center">
 									<ul class="w-full tracking-wider">
 										<li class=" duration-300 py-4 px-10">
-											<a class="  text-lg text-white font-bold hover:text-gray-300 duration-100" href="#services">Services</a>
+											<a @click="humberger = false" class="  text-lg text-white font-bold hover:text-gray-300 duration-100" href="#services">Services</a>
 										</li>
 										<li class=" duration-300 hover:tracking-widest py-4 px-10 relative">
-											<a class="  text-lg text-white font-bold hover:text-gray-300 duration-100" href="#our-work">Our Work</a>
+											<a @click="humberger = false" class="  text-lg text-white font-bold hover:text-gray-300 duration-100" href="#our-work">Our Work</a>
 										</li>
 										<li class=" duration-300 hover:tracking-widest py-4 px-10 relative">
-											<a class="  text-lg text-white font-bold hover:text-gray-300 duration-100" href="#our-story">Our Story</a>
+											<a @click="humberger = false" class="  text-lg text-white font-bold hover:text-gray-300 duration-100" href="#our-story">Our Story</a>
 										</li>
 										<div class=" px-4 py-2 mt-5">
-											<a class="  text-lg font-bold h-12 w-full block flex items-center justify-center px-7 bg-white rounded-lg" href="#Get-Started">
+											<a @click="humberger = false" class="  text-lg font-bold h-12 w-full block flex items-center justify-center px-7 bg-white rounded-lg" href="#Get-Started">
 												<span class="gradient-text duration-300 uppercase">Get Started</span>
 											</a>
 										</div>
@@ -251,7 +249,7 @@
 					</div>
 					<!------->
 					<div class="absolute left-0 2xl:-bottom-32 lg:-bottom-20 md:-bottom-10 sm:-bottom-5 -bottom-2 w-full overflow-hidden z-30">
-						<img height="100%" width="295px" class="w-full h-auto" src="images/home/svgave.svg" alt="svg">
+						<img height="100%" width="295px" class="w-full h-auto" src="images/home/herowave.svg" alt="svg">
 					</div>
 				</div>
 			</section>
@@ -667,13 +665,16 @@
 			<div class=" absolute md:right-20 sm:right-10 right-5 sm:bottom-10 bottom-16">
 				<a href="#" class=" font-semibold lg:text-lg text-sm text-white ">
 					<img height="100%" width="100%" class="w-auto mx-auto h-auto" src="images/header-footer/up-arrow.svg" alt="Logo">
-					<span class="text-center mt-3 m-auto">Back to top</span>
+					<span class="text-center mt-3 m-auto"></span>
 				</a>
 			</div>
 		</footer>
 		<!--  Alpine Js -->
 		<script src="js/alpine.min.js" defer></script>
 		</script>
+		<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20559550.js"></script>
+<!-- End of HubSpot Embed Code -->
 	</body>
 </html>
 
